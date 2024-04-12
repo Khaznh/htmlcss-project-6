@@ -1043,3 +1043,34 @@ a {
 .conditions {
   margin-left: 13px;
 }
+
+.design-video-center {
+  position: relative;
+  width: 100%;
+}
+
+.design-video-center img {
+  width: 100%;
+}
+
+.video-deco .video-deco-inner-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-deco .video-deco-inner-2 p {
+  padding: 16px 29px;
+
+  color: #51586a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.66; /* 166.667% */
+  text-transform: uppercase;
+  background-color: #fff;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
