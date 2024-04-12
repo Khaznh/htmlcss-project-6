@@ -113,6 +113,17 @@
   <body>
     <header class="header fixed">
       <div class="outline-container">
+        <input
+          hidden
+          type="checkbox"
+          name=""
+          id="show-menu"
+          class="show-menu"
+        />
+        <label for="show-menu" class="menu-overlay"></label>
+        <div class="menu-drawer">
+          <ul id="sub-menu"></ul>
+        </div>
         <div class="df-row">
           <div class="cta-header">
             <a href="mailto:hi@arif.interactive">
@@ -127,9 +138,11 @@
             <a href="mailto:hi@arif.interactive" class="mail-header"
               >hi@arif.interactive</a
             >
-            <div class="menu-mobile-outer show-on-mobile">
-              <img src="./assets/icon/menu.svg" alt="" class="menu-mobile" />
-            </div>
+            <label for="show-menu">
+              <div class="menu-mobile-outer show-on-mobile">
+                <img src="./assets/icon/menu.svg" alt="" class="menu-mobile" />
+              </div>
+            </label>
           </div>
 
           <a href="#">
@@ -143,17 +156,17 @@
           </a>
 
           <nav class="navbar">
-            <ul class="navbar-list">
-              <li class="navbar item">
+            <ul class="navbar-list" id="main-menu">
+              <li class="navbar-item">
                 <a href="#!" class="navbar-link">Projects</a>
               </li>
-              <li class="navbar item">
+              <li class="navbar-item">
                 <a href="#!" class="navbar-link">Journey</a>
               </li>
-              <li class="navbar item">
+              <li class="navbar-item">
                 <a href="#!" class="navbar-link">Service</a>
               </li>
-              <li class="navbar item">
+              <li class="navbar-item">
                 <a href="#!" class="navbar-link">Contact</a>
               </li>
             </ul>
@@ -166,7 +179,7 @@
       <section class="hero">
         <div class="container">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <div class="img-holder">
                 <img
                   src="./assets/image/hero-image.png"
@@ -175,7 +188,7 @@
                 />
               </div>
             </div>
-            <div class="col-lg-5 offset-1">
+            <div class="col-lg-5 offset-lg-1 col-md-12">
               <div class="hero-info">
                 <h1 class="heading lv1">An Interactive Designer</h1>
                 <p class="section-desc">
@@ -214,7 +227,9 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-4">
-              <p class="clients-heading">Meet my recent clients</p>
+              <div class="clients-center">
+                <p class="clients-heading">Meet my recent clients</p>
+              </div>
             </div>
             <div class="clients-grid">
               <div class="clients-item">
@@ -340,7 +355,7 @@
           <div class="row">
             <div class="col-lg-4">
               <a href="#!">
-                <div class="specialities-block">
+                <div class="specialities-block active">
                   <div class="specialities-img-holder">
                     <i class="fa-solid fa-lightbulb"></i>
                   </div>
@@ -381,27 +396,38 @@
               </a>
             </div>
           </div>
+
+          <div class="dots show-on-mobile">
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+          </div>
         </div>
       </section>
 
       <section class="projects">
         <div class="container">
           <div class="row">
-            <div class="col-lg-5">
-              <h2 class="heading lv2">
-                Take a look <br />at my recent projects
-              </h2>
+            <div class="col-lg-5 col-md-12">
+              <div class="projects-center">
+                <h2 class="heading lv2">
+                  Take a look <br class="endline-in-computer" />at
+                  <br class="endline-in-mobile" />my recent projects
+                </h2>
+              </div>
             </div>
-            <div class="col-lg-5 offset-lg-1">
-              <p class="section-desc">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                urna, non nisl tincidunt ut elementum turpis.
-              </p>
+            <div class="col-lg-5 offset-lg-1 col-md-12 offset-md-0">
+              <div class="projects-center">
+                <p class="section-desc">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+                  urna, non nisl tincidunt ut elementum turpis.
+                </p>
+              </div>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <div class="project-block">
                 <div class="project-block-info">
                   <a href="#!"><h3 class="heading lv3">Wally Website</h3></a>
@@ -421,7 +447,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <div class="project-block">
                 <div class="project-block-info">
                   <a href="#!"><h3 class="heading lv3">Banking App</h3></a>
@@ -444,7 +470,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <div class="project-block">
                 <div class="project-block-info">
                   <a href="#!"><h3 class="heading lv3">Web App</h3></a>
@@ -464,7 +490,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-12">
               <div class="project-block">
                 <div class="project-block-info">
                   <a href="#!"><h3 class="heading lv3">Oculus Website</h3></a>
@@ -487,8 +513,10 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-2 offset-lg-5">
-              <a href="#!" class="btn project-btn">All Projects</a>
+            <div class="col-lg-2 offset-lg-5 col-md-12 col-sm-12">
+              <div class="projects-center">
+                <a href="#!" class="btn project-btn">All Projects</a>
+              </div>
             </div>
           </div>
         </div>
@@ -527,17 +555,19 @@
           </div>
 
           <div class="row">
-            <div class="outer-container col-lg-10 offset-lg-1">
-              <div class="row">
-                <div class="col-lg-2 offset-lg-2">
+            <div
+              class="outer-container col-lg-10 offset-lg-1 col-md-12 col-sm-12"
+            >
+              <div class="row col-sm-3">
+                <div class="col-lg-2 offset-lg-2 col-md-4 col-4">
                   <p class="designer-number">08+</p>
                   <p class="designer-info">Years Experience</p>
                 </div>
-                <div class="col-lg-2 offset-lg-1">
+                <div class="col-lg-2 offset-lg-1 col-md-4 col-4">
                   <p class="designer-number">21+</p>
                   <p class="designer-info">Features & Awards</p>
                 </div>
-                <div class="col-lg-2 offset-lg-1">
+                <div class="col-lg-2 offset-lg-1 col-md-4 col-4">
                   <p class="designer-number">97%</p>
                   <p class="designer-info">Clients Rating</p>
                 </div>
@@ -782,7 +812,7 @@
 
           <!-- Question 1 -->
           <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-11 col-md-12 col-12">
               <input
                 type="checkbox"
                 name=""
@@ -819,6 +849,7 @@
                       >
                         <!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                         <path
+                          fill="currentColor"
                           d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"
                         />
                       </svg>
@@ -831,7 +862,7 @@
 
           <!-- Question 2 -->
           <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-11 col-md-12 col-12">
               <input
                 type="checkbox"
                 name=""
@@ -881,7 +912,7 @@
 
           <!-- Question 3 -->
           <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-11 col-md-12 col-12">
               <input
                 type="checkbox"
                 name=""
@@ -931,7 +962,7 @@
 
           <!-- Question 4 -->
           <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-11 col-md-12 col-12">
               <input
                 type="checkbox"
                 name=""
@@ -979,7 +1010,7 @@
 
           <!-- Question 5 -->
           <div class="row">
-            <div class="col-lg-11">
+            <div class="col-lg-11 col-md-12 col-12">
               <input
                 type="checkbox"
                 name=""
@@ -1055,7 +1086,7 @@
           </div>
 
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12">
               <div class="atmosphere-img-holder">
                 <img
                   src="./assets/image/atmosphere-img-1.png"
@@ -1064,8 +1095,8 @@
                 />
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="atmosphere-img-holder">
+            <div class="col-lg-4 col-md-12 col-12">
+              <div class="atmosphere-img-holder active">
                 <img
                   src="./assets/image/atmosphere-img-2.png"
                   alt=""
@@ -1073,7 +1104,7 @@
                 />
               </div>
             </div>
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-12">
               <div class="atmosphere-img-holder">
                 <img
                   src="./assets/image/atmosphere-img-3.png"
@@ -1083,6 +1114,14 @@
               </div>
             </div>
           </div>
+
+          <div class="dots show-on-mobile">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
         </div>
       </section>
 
@@ -1091,19 +1130,23 @@
           <div class="call-inner">
             <div class="row">
               <div class="col">
-                <div class="call-img-holder">
-                  <img
-                    src="./assets/icon/call-icon.svg"
-                    alt=""
-                    class="call-img"
-                  />
+                <div class="call-center">
+                  <div class="call-img-holder">
+                    <img
+                      src="./assets/icon/call-icon.svg"
+                      alt=""
+                      class="call-img"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="row">
               <div class="col">
-                <h2 class="heading lv2">Got a project? Let’s talk</h2>
+                <div class="call-center">
+                  <h2 class="heading lv2">Got a project? Let’s talk</h2>
+                </div>
               </div>
             </div>
 
@@ -1190,5 +1233,12 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const subMenu = document.querySelector("#sub-menu");
+      const mainMenu = document.querySelector("#main-menu");
+
+      subMenu.innerHTML = mainMenu.innerHTML;
+    </script>
   </body>
 </html>

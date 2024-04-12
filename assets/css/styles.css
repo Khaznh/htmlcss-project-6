@@ -676,6 +676,8 @@ a {
   line-height: 1.81; /* 181.25% */
 }
 
+.atmosphere .dots,
+.specialities .dots,
 .feedback .dots {
   margin-top: 40px;
 
@@ -685,6 +687,8 @@ a {
   gap: 24px;
 }
 
+.atmosphere .dot,
+.specialities .dot,
 .feedback .dot {
   width: 16px;
   height: 16px;
@@ -694,11 +698,15 @@ a {
   cursor: pointer;
 }
 
+.atmosphere .dot.active,
+.specialities .dot.active,
 .feedback .dot.active {
   background-color: rgba(93, 59, 238, 1);
   position: relative;
 }
 
+.atmosphere .dot::after,
+.specialities .dot.active::after,
 .feedback .dot.active::after {
   content: "";
   display: inline-block;
